@@ -1,0 +1,7 @@
+NO,POINT_PEMERIKSAAN,ID,NOMINAL,Newnom,Uppertol,Lowertol,KP
+M201,SUDUT,Projection Angle Two Cylinder EX-,-21.0,21.0,0.167,-0.167,
+M201,POSISI SUMBU X,X-Value Cylinder EX,0.0,0.0,0.05,-0.05,
+M201,POSISI SUMBU Y,Z-Value Cylinder EX,-0.0004231,0.0,0.05,-0.05,
+M202,SUDUT,Projection Angle Two Cylinder IN-,21.0000003,21.0000003,0.167,-0.167,
+M202,POSISI SUMBU X,X-Value Cylinder IN,0.0,0.0,0.1,-0.1,
+M202,POSISI SUMBU Y,Z-Value Cylinder IN,-0.0004231,0.0,0.1,-0.1,
