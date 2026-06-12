@@ -695,10 +695,13 @@ def build_report_from_csv(df: pd.DataFrame, model: str, date_str: str, shift: in
 
 
     # Filter data — sertakan PartName kalau diberikan
+    # Catatan: kolom Shift bertipe TEXT di SQLite, sedangkan `shift` bisa
+    # dikirim sebagai int. Bandingkan sebagai string agar tidak selalu
+    # mismatch (yang sebelumnya bikin data selalu kosong → "Tidak ada data").
     mask = (
         (df['ModelName'] == model) &
         (df['DateOnly']  == date_str) &
-        (df['Shift']     == shift) &
+        (df['Shift'].astype(str) == str(shift)) &
         (df['Category']  == 'Produksi')
     )
     if part_name:

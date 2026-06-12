@@ -1245,8 +1245,17 @@ class DescriptivePage:
         # Toggle bar
         self._render_mode_toggle()
 
+        # Deteksi transisi mode. Dipakai _render_deep untuk menyinkronkan
+        # periode/shift dari Quick/Dashboard HANYA saat baru berpindah ke
+        # Deep — supaya selectbox periode/shift di dalam Deep tetap bisa
+        # diubah pengguna (tidak ke-reset tiap render).
+        _prev_mode = st.session_state.get("_desc_active_mode")
+        _cur_mode  = st.session_state["desc_mode"]
+        st.session_state["_desc_entered_deep"] = (_cur_mode == "deep" and _prev_mode != "deep")
+        st.session_state["_desc_active_mode"]  = _cur_mode
+
         # Render sesuai mode
-        if st.session_state["desc_mode"] == "quick":
+        if _cur_mode == "quick":
             self._render_quick()
         else:
             self._render_deep()
@@ -2614,20 +2623,30 @@ class DescriptivePage:
     #  DEEP INVESTIGATION MODE — wrap kondisi 1-4 existing
     # ═════════════════════════════════════════════════════════════════
     def _render_deep(self):
-        # ── Sync filter pills Quick → selectbox Deep ──────────────────
-        # Jalankan setiap kali render supaya tetap sinkron saat pindah tab
+        # ── Sync filter Quick/Dashboard → Deep (HANYA saat baru masuk Deep) ──
+        # Nilai periode/shift tersimpan di key bersama _dash_time/_dash_shift.
+        # Periode memakai string yang sama persis dengan build_filters →
+        # cukup identitas. Shift bisa berformat "Semua"/"1".. (Quick) atau
+        # "Semua Shift"/"Shift 1".. (Dashboard) → petakan keduanya, dan
+        # validasi agar nilainya benar-benar ada di opsi (hindari crash).
         p = "shared"
-        time_map  = {"Hari Ini":"Hari Ini", "7H":"7 Hari Terakhir", "30H":"30 Hari Terakhir",
-                     "Semua":"Semua Data", "Custom":"Custom"}
-        shift_map = {"All":"Semua Shift", "S1":"1", "S2":"2", "S3":"3"}
-
-        pill_time  = st.session_state.get(f"{p}_dash_time")
-        pill_shift = st.session_state.get(f"{p}_dash_shift")
-
-        if pill_time  and pill_time  in time_map:
-            st.session_state[f"{p}_time"]  = time_map[pill_time]
-        if pill_shift and pill_shift in shift_map:
-            st.session_state[f"{p}_shift"] = shift_map[pill_shift]
+        if st.session_state.get("_desc_entered_deep"):
+            _valid_time = {"Hari Ini", "7 Hari Terakhir", "30 Hari Terakhir",
+                           "Semua Periode", "Custom"}
+            _shift_map = {
+                "Semua": "Semua Shift", "Semua Shift": "Semua Shift",
+                "Shift 1": "1", "Shift 2": "2", "Shift 3": "3",
+                "1": "1", "2": "2", "3": "3",
+            }
+            _pill_time  = st.session_state.get(f"{p}_dash_time")
+            _pill_shift = st.session_state.get(f"{p}_dash_shift")
+            if _pill_time in _valid_time:
+                st.session_state[f"{p}_time"] = _pill_time
+            if _pill_shift in _shift_map:
+                _mapped = _shift_map[_pill_shift]
+                _avail_shift = set(self.df_all["Shift"].dropna().astype(str).unique().tolist())
+                if _mapped == "Semua Shift" or _mapped in _avail_shift:
+                    st.session_state[f"{p}_shift"] = _mapped
         """
         Deep Investigation mode — kondisi 1-4 yang sudah ada di file lama.
 
@@ -3846,13 +3865,20 @@ class DescriptivePage:
 #      letakkan persis sebelum _render_deep_breadcrumb
 # ══════════════════════════════════════════════════════════════════════
 
-    # ── Helper: hitung Cpk ───────────────────────────────────────────
+    # ── Helper: hitung jumlah part (khusus Category=Produksi) ────────
+    # Definisi "1 part" identik dengan Dashboard: 1 set titik ukur (sesuai
+    # Mapping) dari satu SampleNo dalam satu kali pengukuran. Kunci unik:
+    #   (Date, Shift, Cycle, SampleNo, PartName, ModelName)
+    # KHUSUS Produksi agar konsisten dengan KPI part di Dashboard.
     def _count_parts(self, df: "pd.DataFrame") -> int:
         if df.empty:
             return 0
-        group_cols = [df["Date"].dt.date, "Shift", "Cycle", "PartName", "ModelName"]
-        if "SampleNo" in df.columns:
-            group_cols.insert(3, "SampleNo")
+        if "Category" in df.columns:
+            df = df[df["Category"] == "Produksi"]
+            if df.empty:
+                return 0
+        group_cols = [c for c in ["Date", "Shift", "Cycle", "SampleNo", "PartName", "ModelName"]
+                      if c in df.columns]
         return df.groupby(group_cols).ngroups
 
     def _calc_cpk(
