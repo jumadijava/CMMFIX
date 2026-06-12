@@ -1,0 +1,60 @@
+NO,POINT_PEMERIKSAAN,ID,NOMINAL,Newnom,Uppertol,Lowertol,KP
+M000,Flatness,Flatness DPN,0.0,0.0,0.05,0.0,0
+S051,Posisi X,X Value_N0. 12,-25.0,25.0,0.15,-0.15,0
+S051,Posisi Y,Z Value_N0. 12,-25.0,25.0,0.15,-0.15,0
+S052,Posisi X,X Value_NO. 13,27.0,27.0,0.2,-0.2,0
+S052,Posisi Y,Z Value_Circle8,-25.0,25.0,0.2,-0.2,0
+S064,Posisi X,X Value_NO. 13,27.0,27.0,0.15,-0.15,0
+S064,Posisi Y,Z Value_NO. 13,23.0,23.0,0.15,-0.15,0
+S063,Posisi X,X Value_Circle5,-25.0,25.0,0.2,-0.2,0
+S063,Posisi Y,Z Value_Circle5,25.0,25.0,0.2,-0.2,0
+M051,Posisi X,X Value_NO.4,-25.0,25.0,0.05,-0.05,1
+M051,Posisi Y,Z Value_NO.4,-25.0,25.0,0.05,-0.05,1
+M052,Posisi X,X Value_Circle NO.6,27.0,27.0,0.2,-0.2,0
+M052,Posisi Y,Z Value_Circle NO.6,-25.0,25.0,0.2,-0.2,0
+M064,Posisi X thd M051,Distance NO.5_X,52.0,52.0,0.05,-0.05,1
+M064,Posisi Y thd M051,Distance NO.5_Z,48.0,48.0,0.05,-0.05,1
+M063,Posisi X,X Value_Circle NO.7,-25.0,25.0,0.2,-0.2,0
+M063,Posisi Y,Z Value_Circle NO.7,25.0,25.0,0.2,-0.2,0
+P001,Posisi X,X Value_Circle NO.8,2.4,2.4,0.2,-0.2,0
+P001,Posisi Y,Z Value_Circle NO.8,-57.0,57.0,0.2,-0.2,0
+M203,Sudut,Projection Angle Two NO.9,40.0,40.0,0.5,-0.5,0
+M203,Posisi X,Z Value CIRCLE DIA 24,0.0,0.0,0.1,-0.1,0
+M203,Posisi Y,X Value NO.9,2.4,2.4,0.1,-0.1,0
+M204,Posisi X,X Value NO.33,48.0,48.0,0.2,-0.2,0
+M204,Posisi Y,Y Value NO.33,22.5,22.5,0.2,-0.2,0
+N701,Posisi Z DIA 30 Thd M000,Y Value CIRCLE 1,21.016,21.016,0.15,-0.15,0
+N701,Posisi Y DIA 30 thd Center,Z Value REC DIA EXH,0.0,0.0,0.1,-0.1,0
+N701,Posisi Z PORT CASTING  Thd M000,Y Value_PORT EXH,21.0,21.0,0.4,-0.4,0
+N701,Posisi Y PORT CASTING thd Center,Z Value_PORT EXH,0.0,0.0,0.4,-0.4,0
+N702,Posisi X Thd Center,Z Value NO.31,19.1,19.1,0.1,-0.1,0
+N702,Posisi Y Thd M000,Y Value CIRCLE NO.31,39.4,39.4,0.2,-0.2,0
+N703,Posisi X Thd N702,Distance NO.32_Z,42.0,42.0,0.1,-0.1,0
+N703,Posisi Y Thd  M000,Y Value CIRCLE NO.32,7.7,7.7,0.1,-0.1,0
+N703,Distance Thd N702,Distance Z N703 A_A,53.0,53.0,0.1,-0.1,0
+N800,Flatness,Flatness INLATE,0.0,0.0,0.05,0.0,0
+N800,Ketinggian surface Inlet,X Value INLET NO.27,-52.0,52.0,0.15,-0.15,0
+N800,Posisi X (CA) thd center ,Flatness INLATE,0.0,0.0,0.4,0.0,0
+N800,Posisi Y (CA) thd M000,Y Value NO.27,34.5,34.5,0.4,-0.4,0
+N801,Posisi X thd center Port In,Z Value N081,23.0,23.0,0.1,-0.1,0
+N801,Posisi Y thd center Port In,Y Value N081,26.1,26.1,0.2,-0.2,0
+N802,Posisi X thd N801,Distance 46_Z,46.0,46.0,0.1,-0.1,0
+N802,Posisi Y thd M000,Y Value Y NO82,42.9,42.9,0.2,-0.2,0
+N802,Distance N802 Thd N801,Distance 802_3d,49.0,49.0,0.1,-0.1,0
+P101,Posisi X,Z Value_Circle NO. 15,26.0,26.0,0.05,-0.05,0
+P101,Posisi Y,X Value_Circle NO. 15,-44.0,44.0,0.05,-0.05,0
+P101,Sudut,Projection Angle Two OIL NO.15,-34.0,34.0,0.0,-3.0,0
+P101,Posisi X,Z Value_Intersection OIL P101,26.0,26.0,0.15,-0.15,0
+P101,Posisi Y,X Value_Intersection OIL P101,-44.0,44.0,0.15,-0.15,0
+M201,Sudut,Projection Angle Two_NO.37,25.0,25.0,0.167,-0.167,0
+M201,Posisi X,X Value NO.37,0.0,0.0,0.1,-0.1,0
+M201,Posisi Y,Z Value NO.37,0.0,0.0,0.1,-0.1,0
+M202 Valve boring,Sudut,Projection Angle Two_NO.36,-22.0,22.0,0.167,-0.167,0
+M202 Valve boring,Posisi X,X Value NO.36,0.0,0.0,0.1,-0.1,0
+M202 Valve boring,Posisi Y,Z Value NO.36,0.0,0.0,0.1,-0.1,0
+P201 Valve boring,Sudut,Projection Angle Two_NO.35,25.0,25.0,0.167,-0.167,0
+P201 Valve boring,Posisi X,X Value NO.35,0.0,0.0,0.1,-0.1,0
+P201 Valve boring,Posisi Y,Z Value NO.35,0.0,0.0,0.1,-0.1,0
+P202 Valve boring,Sudut,Projection Angle Two_NO.34,-22.0,22.0,0.167,-0.167,0
+P202 Valve boring,Posisi X,X Value N0.34,0.0,0.0,0.1,-0.1,0
+P202 Valve boring,Posisi Y,Z Value NO.34,0.0,0.0,0.1,-0.1,0
