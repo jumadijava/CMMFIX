@@ -1,0 +1,86 @@
+NO,POINT_PEMERIKSAAN,ID,PARAMETER,NOMINAL,Newnom,Uppertol,Lowertol,KP
+C000,Flatness (Joint Face),N0415,Flatness,0.0,0.0,0.05,-0.0,0
+C000,Flatness adjacent bosses,N0063,Flatness,0.0,0.0,0.03,-0.0,0
+C001,Posisi X,N0053,Pos. X,33.0,33.0,0.05,-0.05,1
+C001,Posisi Y,N0053,Pos. Y,56.3,56.3,0.05,-0.05,1
+C002,Posisi X From C001,N0405,Distance,67.5,67.5,0.05,-0.05,1
+C002,Posisi Y From C001,N0405,Distance,120.3,120.3,0.05,-0.05,1
+C005,Posisi X,N0070,Pos. Y,0.0,0.0,0.2,-0.2,0
+C005,Posisi Y,N0070,Pos. X,0.0,0.0,0.2,-0.2,0
+C005,Circularity,N0417,Roundnes,0.0,0.0,0.01,-0.0,1
+C005,Perpendicularity to b,N0072,Rectang.   2,0.0,0.0,0.01,-0.0,1
+C005,"Concentricity Ø 30,5H7 to f",N0416,Concentr   5,0.0,0.0,1.0,-0.0,1
+C030,Posisi X,N0116,Pos. X,61.6,61.6,0.05,-0.05,1
+C030,Posisi Y,N0116,Pos. Y,12.5,12.5,0.05,-0.05,1
+D005,Posisi X,N0208,Pos. X,0.0,0.0,0.2,-0.2,0
+D005,Posisi Y,N0208,Pos. Y,0.0,0.0,0.2,-0.2,0
+D005,Concentricity to f,N0212,Concentr   5,0.0,0.0,0.1,-0.0,1
+D021,Posisi X,N0201,Pos. X,90.0,90.0,0.2,-0.2,0
+D021,Posisi Y,N0201,Pos. Y,23.0,23.0,0.2,-0.2,0
+D023,Posisi X,N0170,Pos. X,111.0,111.0,0.2,-0.2,0
+D023,Posisi Y,N0170,Pos. Y,49.0,49.0,0.2,-0.2,0
+D032,Posisi X,N0180,Pos. X,93.5,93.5,0.2,-0.2,0
+D032,Posisi Y,N0180,Pos. Y,25.0,25.0,0.2,-0.2,0
+C016,Diameter,N0137,Diameter,15.0,15.0,0.3,-0.0,0
+C016,Posisi X,N0137,Pos. X,8.5,8.5,0.1,-0.1,0
+C016,Posisi Y,N0137,Pos. Y,19.8,19.8,0.2,-0.2,0
+C016,Distance 01,N0431,Distance,21.55,21.55,0.1,-0.1,0
+C019,Posisi X,N0083,Pos. X,76.0,76.0,0.2,-0.2,0
+C019,Posisi Y,N0083,Pos. Y,79.5,79.5,0.2,-0.2,0
+C020,Posisi X,N0079,Pos. X,50.0,50.0,0.2,-0.2,0
+C020,Posisi Y,N0079,Pos. Y,50.0,50.0,0.2,-0.2,0
+C041,Posisi X,N0087,Pos. X,45.5,45.5,0.2,-0.2,0
+C041,Posisi Y,N0087,Pos. Y,76.2,76.2,0.2,-0.2,0
+C042,Posisi X,N0112,Pos. X,107.0,107.0,0.2,-0.2,0
+C042,Posisi Y,N0112,Pos. Y,60.0,60.0,0.2,-0.2,0
+C043,Posisi X,N0108,Pos. X,117.0,117.0,0.2,-0.2,0
+C043,Posisi Y,N0108,Pos. Y,0.5,0.5,0.2,-0.2,0
+C044,Posisi X,N0104,Pos. X,90.5,90.5,0.2,-0.2,0
+C044,Posisi Y,N0104,Pos. Y,58.0,58.0,0.2,-0.2,0
+C045,Posisi X,N0100,Pos. X,37.0,37.0,0.2,-0.2,0
+C045,Posisi Y,N0100,Pos. Y,57.3,57.3,0.2,-0.2,0
+C046,Posisi X,N0096,Pos. X,63.0,63.0,0.2,-0.2,0
+C046,Posisi Y,N0096,Pos. Y,3.0,3.0,0.2,-0.2,0
+C047,Posisi X,N0092,Pos. X,53.0,53.0,0.2,-0.2,0
+C047,Posisi Y,N0092,Pos. Y,59.0,59.0,0.2,-0.2,0
+C158,Posisi X,N0120,Pos. X,10.7,10.7,0.1,-0.1,1
+C158,Posisi Y,N0120,Pos. Y,54.4,54.4,0.1,-0.1,1
+C159,Posisi X,N0124,Pos. X,2.1,2.1,0.1,-0.1,1
+C159,Distance From C158,N0126,Distance,9.5,9.5,0.1,-0.1,1
+D013,Angle From D014,N0258,Angle,120.0,120.0,0.5,-0.5,0
+D013,PCD From O1,N0248,Diameter,42.0,42.0,0.2,-0.2,0
+D014,Angle,N0254,Angle,5.0,5.0,0.5,-0.5,0
+D014,PCD From O1,N0248,Diameter,42.0,42.0,0.2,-0.2,0
+D015,Angle From D014,N0256,Angle,120.0,120.0,0.5,-0.5,0
+D015,PCD From O1,N0248,Diameter,42.0,42.0,0.2,-0.2,0
+D033,Angle 1,N0429,Angle,21.0,21.0,3.0,-3.0,0
+D033,Angle 2,N0286,Angle,32.0,32.0,3.0,-3.0,0
+D033,Distance From D032,N0423,Distance,6.0,6.0,0.2,-0.2,0
+D087,Posisi X,N0398,Pos. X,22.0,22.0,0.2,-0.2,0
+D087,Posisi Y,N0398,Pos. Y,89.0,89.0,0.2,-0.2,0
+D087,Posisi Z,N0398,Pos. Z,110.0,110.0,0.2,-0.2,0
+D087,Angle 1,N0397,Angle,35.0,35.0,3.0,-3.0,0
+D087,Angle 2,N0392,Angle,40.0,40.0,3.0,-3.0,0
+D090,Posisi X,N0193,Pos. X,64.0,64.0,0.2,-0.2,0
+D090,Posisi Y,N0193,Pos. Y,99.0,99.0,0.2,-0.2,0
+D091,Posisi X,N0166,Pos. X,104.9,104.9,0.2,-0.2,0
+D091,Posisi Y,N0166,Pos. Y,84.3,84.3,0.2,-0.2,0
+D092,Posisi X,N0162,Pos. X,67.1,67.1,0.2,-0.2,0
+D092,Posisi Y,N0162,Pos. Y,87.0,87.0,0.2,-0.2,0
+D093,Posisi X,N0158,Pos. X,87.0,87.0,0.2,-0.2,0
+D093,Posisi Y,N0158,Pos. Y,37.5,37.5,0.2,-0.2,0
+D094,Posisi X,N0154,Pos. X,63.0,63.0,0.2,-0.2,0
+D094,Posisi Y,N0154,Pos. Y,11.0,11.0,0.2,-0.2,0
+D095,Posisi X,N0150,Pos. X,38.0,38.0,0.2,-0.2,0
+D095,Posisi Y,N0150,Pos. Y,52.0,52.0,0.2,-0.2,0
+D096,Posisi X,N0197,Pos. X,47.73,47.73,0.1,-0.1,1
+D096,Posisi Y,N0197,Pos. Y,47.73,47.73,0.1,-0.1,1
+D098,Posisi X,N0418,Pos. X,73.5,73.5,0.2,-0.2,1
+D098,Posisi Y,N0418,Pos. Y,35.0,35.0,0.2,-0.2,1
+C160,Posisi X,N0349,Pos. X,8.0,8.0,0.2,-0.2,0
+C160,Posisi Y,N0349,Pos. Z,31.0,31.0,0.2,-0.2,0
+C111,Flatness,N0400,Flatness,0.0,0.0,0.05,-0.0,0
+C163,Posisi X,N0357,Pos. X,19.0,19.0,0.2,-0.2,0
+C163,Posisi Y,N0357,Pos. Z,25.0,25.0,0.2,-0.2,0
+C164,Posisi X,N0337,Pos. X,33.0,33.0,0.2,-0.2,0
+C164,Posisi Y,N0337,Pos. Z,23.0,23.0,0.2,-0.2,0
