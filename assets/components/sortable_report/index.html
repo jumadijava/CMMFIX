@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:Arial,sans-serif; font-size:10px; background:white; padding:12px; }
+  th.sample-th { cursor:grab !important; user-select:none; transition:opacity .15s; }
+  th.sample-th:active { cursor:grabbing !important; }
+  th.drag-over { outline:2px solid #60a5fa !important; outline-offset:-2px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+window.parent.postMessage({type:"streamlit:componentReady", apiVersion:1}, "*");
+
+let currentOrder = [];
+let dragSrcText  = null;
+
+window.addEventListener("message", function(e) {
+  if (!e.data || e.data.type !== "streamlit:render") return;
+  const args = e.data.args || {};
+  currentOrder = [...(args.sample_order || [])];
+  document.getElementById("root").innerHTML = args.html_content || "";
+  document.querySelectorAll("th.sample-th").forEach(attachDrag);
+  setTimeout(function() {
+    window.parent.postMessage({type:"streamlit:setFrameHeight",
+      height: document.body.scrollHeight + 20}, "*");
+  }, 150);
+});
+
+function attachDrag(th) {
+  th.draggable = true;
+  th.addEventListener("dragstart", function(e) {
+    dragSrcText = th.textContent.trim();
+    e.dataTransfer.effectAllowed = "move";
+    th.style.opacity = "0.45";
+  });
+  th.addEventListener("dragend", function() {
+    th.style.opacity = "";
+    document.querySelectorAll("th.sample-th").forEach(function(t) {
+      t.classList.remove("drag-over");
+    });
+  });
+  th.addEventListener("dragover", function(e) {
+    e.preventDefault();
+    th.classList.add("drag-over");
+  });
+  th.addEventListener("dragleave", function() {
+    th.classList.remove("drag-over");
+  });
+  th.addEventListener("drop", function(e) {
+    e.preventDefault();
+    th.classList.remove("drag-over");
+    var tgtText = th.textContent.trim();
+    if (!dragSrcText || dragSrcText === tgtText) return;
+    // Swap DOM
+    document.querySelectorAll("th.sample-th").forEach(function(t) {
+      if (t.textContent.trim() === dragSrcText) t.textContent = tgtText;
+      else if (t === th) t.textContent = dragSrcText;
+    });
+    // Swap in order array
+    var si = currentOrder.indexOf(dragSrcText);
+    var ti = currentOrder.indexOf(tgtText);
+    if (si >= 0 && ti >= 0) {
+      var tmp = currentOrder[si];
+      currentOrder[si] = currentOrder[ti];
+      currentOrder[ti] = tmp;
+    }
+    dragSrcText = null;
+    window.parent.postMessage({type:"streamlit:setComponentValue",
+      value: currentOrder.slice()}, "*");
+  });
+}
+</script>
+</body>
+</html>
