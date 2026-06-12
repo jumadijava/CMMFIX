@@ -1,0 +1,157 @@
+NO,POINT_PEMERIKSAAN,ID,PARAMETER,NOMINAL,Newnom,Uppertol,Lowertol,KP
+B000-1,Flatness Surface Cover,N0234,Flatness,0.0,0.0,0.1,-0.0,0
+A000-1,Flatness Surface (a),N0079,Flatness,0.0,0.0,0.05,-0.0,0
+A000-1,Flatness adjacent bosses,N0080,Flatness,0.0,0.0,0.03,-0.0,0
+A000-2,Flatness Surface (a),N0137,Flatness,0.0,0.0,0.05,-0.0,0
+A000-2,Flatness adjacent bosses,N0080,Flatness,0.0,0.0,0.03,-0.0,0
+A001,Posisi X,N0078,Pos. X,56.3,56.3,0.05,-0.05,1
+A001,Posisi Y,N0078,Pos. Y,33.0,33.0,0.05,-0.05,1
+A002,Posisi X From A001,N0073,Pos. X,120.3,120.3,0.05,-0.05,1
+A002,Posisi Y From A001,N0073,Pos. Y,67.5,67.5,0.05,-0.05,1
+A002,Posisi X From A001 ( Drill 6 ),N0531,Pos. X,120.3,120.3,0.2,-0.2,1
+A002,Posisi Y From A001 ( Drill 6 ),N0531,Pos. Y,67.5,67.5,0.2,-0.2,1
+A003,Posisi X From A006,N0073,Pos. X,120.3,120.3,0.05,-0.05,1
+A003,Posisi Y From A006,N0184,Pos. Y,50.0,50.0,0.05,-0.05,1
+A004,Posisi X From A003,N0190,Pos. X,52.0,52.0,0.05,-0.05,1
+A004,Posisi Y From A003,N0190,Pos. Y,107.0,107.0,0.05,-0.05,1
+A005,Posisi X,N0049,Pos. X,0.0,0.0,0.05,-0.05,0
+A005,Posisi Y,N0049,Pos. Y,0.0,0.0,0.05,-0.05,0
+A005,Circularity,N0450,Roundnes,0.0,0.0,0.01,-0.0,1
+A005,Perpendicularity To n,N0451,Rectang.,0.0,0.0,0.01,-0.0,1
+A006,Posisi X,N0192,Pos. X,252.0,252.0,0.1,-0.1,1
+A006,Posisi Y,N0192,Pos. Y,0.0,0.0,0.1,-0.1,1
+A006,Concentricity to m,N0488,Concentr,0.0,0.0,0.03,-0.0,1
+A007,Distance From A006,N0166,Distance,47.0,47.0,0.03,-0.03,1
+A007,Distance From A008,N0168,Distance,53.0,53.0,0.03,-0.03,1
+A008,Distance From A006,N0194,Distance,97.0,97.0,0.05,-0.05,1
+A008,Posisi Y,N0158,Pos. Y,0.0,0.0,0.05,-0.05,1
+A030,Posisi X Reamer 8H8,N0112,Pos. X,12.5,12.5,0.05,-0.05,1
+A030,Posisi Y Reamer 8H8,N0112,Pos. Y,61.6,61.6,0.05,-0.05,1
+A030,Posisi X Drill 6.5,N0529,Pos. X,12.5,12.5,0.2,-0.2,0
+A030,Posisi Y Drill 6.5,N0529,Pos. Y,61.6,61.6,0.2,-0.2,0
+B011,Posisi X Reamer 8H8,N0252,Pos. X,12.0,12.0,0.05,-0.05,1
+B011,Posisi Y Reamer 8H8,N0252,Pos. Y,73.0,73.0,0.05,-0.05,1
+B011,Posisi X Drill 5.45,N0280,Pos. X,12.0,12.0,0.2,-0.2,0
+B011,Posisi Y Drill 5.45,N0453,Pos. Y,73.0,73.0,0.2,-0.2,0
+B012,Posisi X From B011 Reamer 8H8,N0266,Distance,238.0,238.0,0.05,-0.05,1
+B012,Posisi Y From B011 Reamer 8H8,N0266,Distance,159.5,159.5,0.05,-0.05,1
+B012,Posisi X From B011 Drill 5.45,N0455,Distance,238.0,238.0,0.2,-0.2,0
+B012,Posisi Y From B011 Drill 5.45,N0455,Distance,159.5,159.5,0.2,-0.2,0
+B021,Posisi X,N0456,Pos. X,23.0,23.0,0.2,-0.2,0
+B021,Posisi Y,N0456,Pos. Y,90.0,90.0,0.2,-0.2,0
+B022,Posisi X,N0205,Pos. X,323.2,323.2,0.2,-0.2,0
+B022,Posisi Y,N0205,Pos. Y,86.2,86.2,0.2,-0.2,0
+B023,Posisi X,N0345,Pos. X,49.0,49.0,0.2,-0.2,0
+B023,Posisi Y,N0345,Pos. Y,111.0,111.0,0.2,-0.2,0
+B024,Posisi X,N0268,Pos. X,235.0,235.0,0.2,-0.2,0
+B024,Posisi Y,N0209,Pos. Y,91.5,91.5,0.2,-0.2,0
+B025,Posisi X,N0292,Pos. X,2.0,2.0,0.1,-0.1,1
+B025,Posisi Y,N0292,Pos. Y,23.0,23.0,0.1,-0.1,1
+B025,Position to d & e,N0503,Position,0.0,0.0,0.1,-0.0,1
+B027,Angle From B010,N0463,Angle,70.0,70.0,1.5,-1.5,1
+B027,Distance From B010,N0458,Distance,1.065,1.065,0.1,-0.1,1
+B027,Position to f & g,N0515,Position,0.0,0.0,0.1,-0.0,0
+B027,Flatness Depth,N0532,Flatness,0.0,0.0,0.02,-0.0,0
+B080,Posisi X Reamer 8H8,N0364,Pos. X,37.0,37.0,0.1,-0.1,1
+B080,Posisi Y Reamer 8H8,N0364,Pos. Y,23.0,23.0,0.1,-0.1,1
+B080,Posisi X Drill 5.45,N0528,Pos. X,37.0,37.0,0.2,-0.2,0
+B080,Posisi Y Drill 5.45,N0528,Pos. Y,23.0,23.0,0.2,-0.2,0
+B082,Posisi X,N0360,Pos. X,31.0,31.0,0.1,-0.1,1
+B082,Posisi Y,N0360,Pos. Y,0.0,0.0,0.1,-0.1,1
+A019,Posisi X,N0119,Pos. X,79.5,79.5,0.2,-0.2,0
+A019,Posisi Y,N0119,Pos. Y,76.0,76.0,0.2,-0.2,0
+A020,Posisi X,N0154,Pos. X,264.5,264.5,0.2,-0.2,0
+A020,Posisi Y,N0154,Pos. Y,47.0,47.0,0.2,-0.2,0
+A026,Posisi X,N0356,Pos. X,40.5,40.5,0.2,-0.2,0
+A026,Posisi Y,N0356,Pos. Y,29.6,29.5,0.2,-0.2,0
+A041,Posisi X,N0084,Pos. X,76.2,76.2,0.2,-0.2,0
+A041,Posisi Y,N0084,Pos. Y,45.5,45.5,0.2,-0.2,0
+A042,Posisi X,N0088,Pos. X,60.0,60.0,0.2,-0.2,0
+A042,Posisi Y,N0088,Pos. Y,107.0,107.0,0.2,-0.2,0
+A043,Posisi X,N0092,Pos. X,0.5,0.5,0.2,-0.2,0
+A043,Posisi Y,N0092,Pos. Y,117.0,117.0,0.2,-0.2,0
+A044,Posisi X,N0096,Pos. X,58.0,58.0,0.2,-0.2,0
+A044,Posisi Y,N0096,Pos. Y,90.5,90.5,0.2,-0.2,0
+A045,Posisi X,N0100,Pos. X,57.3,57.3,0.2,-0.2,0
+A045,Posisi Y,N0100,Pos. Y,37.0,37.0,0.2,-0.2,0
+A046,Posisi X,N0104,Pos. X,3.0,3.0,0.2,-0.2,0
+A046,Posisi Y,N0104,Pos. Y,63.0,63.0,0.2,-0.2,0
+A047,Posisi X,N0108,Pos. X,59.0,59.0,0.2,-0.2,0
+A047,Posisi Y,N0108,Pos. Y,53.0,53.0,0.2,-0.2,0
+A048,Posisi X From A006,N0172,Pos. X,20.0,20.0,0.2,-0.2,0
+A048,Posisi Y From A006,N0172,Pos. Y,28.1,28.1,0.2,-0.2,0
+A049,Posisi X From A048,N0178,Pos. X,11.25,11.26,0.15,-0.15,0
+A049,Posisi Y From A048,N0178,Pos. Y,42.71,42.71,0.15,-0.15,0
+B010,Angle From O1,N0468,Angle,15.0,15.0,1.5,-1.5,1
+B010,Distance From O1,N0470,Distance,46.0,46.0,0.2,-0.2,1
+B010,Position To d & e,N0503,Position,0.0,0.0,0.1,-0.0,1
+B017,Angle From B027,N0474,Angle,40.0,40.0,1.5,-1.5,1
+B017,Distance From B027,N0478,Distance,19.0,19.0,0.1,-0.1,1
+B017,Position To f & g,N0506,Position,0.0,0.0,0.2,-0.0,1
+B018,Angle From B027,N0480,Angle,54.0,54.0,1.5,-1.5,1
+B018,Distance From B027,N0476,Distance,16.5,16.5,0.1,-0.1,1
+B018,Position To f & g,N0525,Position,0.0,0.0,0.2,-0.0,1
+B026,Posisi X,N0356,Pos. X,40.5,40.5,0.2,-0.2,0
+B026,Posisi Y,N0356,Pos. Y,29.6,29.5,0.2,-0.2,0
+B028,Posisi X,N0297,Pos. X,41.5,41.5,0.2,-0.2,0
+B028,Posisi Y,N0345,Pos. Y,111.0,111.0,0.2,-0.2,0
+B051,Posisi X,N0325,Pos. X,337.0,337.0,0.2,-0.2,0
+B051,Posisi Y,N0325,Pos. Y,47.0,47.0,0.2,-0.2,0
+B052,Posisi X,N0321,Pos. X,250.0,250.0,0.2,-0.2,0
+B052,Posisi Y,N0321,Pos. Y,81.0,81.0,0.2,-0.2,0
+B053,Posisi X,N0317,Pos. X,146.0,146.0,0.2,-0.2,0
+B053,Posisi Y,N0317,Pos. Y,77.5,77.5,0.2,-0.2,0
+B054,Posisi X,N0313,Pos. X,72.0,72.0,0.2,-0.2,0
+B054,Posisi Y,N0313,Pos. Y,75.0,75.0,0.2,-0.2,0
+B055,Posisi X,N0309,Pos. X,48.0,48.0,0.2,-0.2,0
+B055,Posisi Y,N0309,Pos. Y,54.0,54.0,0.2,-0.2,0
+B056,Posisi X,N0301,Pos. X,64.0,64.0,0.2,-0.2,0
+B056,Posisi Y,N0301,Pos. Y,48.0,48.0,0.2,-0.2,0
+B057,Posisi X,N0280,Pos. X,12.0,12.0,0.2,-0.2,0
+B057,Posisi Y,N0280,Pos. Y,85.0,85.0,0.2,-0.2,0
+B058,Posisi X,N0276,Pos. X,99.0,99.0,0.2,-0.2,0
+B058,Posisi Y,N0276,Pos. Y,86.0,86.0,0.2,-0.2,0
+B059,Posisi X,N0272,Pos. X,157.0,157.0,0.2,-0.2,0
+B059,Posisi Y,N0272,Pos. Y,86.0,86.0,0.2,-0.2,0
+B060,Posisi X,N0329,Pos. X,333.0,333.0,0.2,-0.2,0
+B060,Posisi Y,N0329,Pos. Y,0.0,0.0,0.2,-0.2,0
+B061,Posisi X,N0341,Pos. X,165.0,165.0,0.2,-0.2,0
+B061,Posisi Y,N0341,Pos. Y,0.0,0.0,0.2,-0.2,0
+B071,Posisi X,N0337,Pos. X,351.0,351.0,0.2,-0.2,0
+B071,Posisi Y,N0337,Pos. Y,45.5,45.5,0.2,-0.2,0
+B072,Posisi X,N0333,Pos. X,382.0,382.0,0.2,-0.2,0
+B072,Posisi Y,N0333,Pos. Y,14.0,14.0,0.2,-0.2,0
+B073,Posisi X,N0201,Pos. X,363.0,363.0,0.2,-0.2,0
+B073,Posisi Y,N0201,Pos. Y,68.0,68.0,0.2,-0.2,0
+B074,Posisi X,N0209,Pos. X,230.0,230.0,0.2,-0.2,0
+B074,Posisi Y,N0209,Pos. Y,91.5,91.5,0.2,-0.2,0
+B075,Posisi X,N0213,Pos. X,98.0,98.0,0.2,-0.2,0
+B075,Posisi Y,N0213,Pos. Y,85.9,85.9,0.2,-0.2,0
+B076,Posisi X,N0217,Pos. X,55.0,55.0,0.2,-0.2,0
+B076,Posisi Y,N0217,Pos. Y,89.0,89.0,0.2,-0.2,0
+B077,Posisi X,N0305,Pos. X,63.5,63.5,0.2,-0.2,0
+B077,Posisi Y,N0305,Pos. Y,57.0,57.0,0.2,-0.2,0
+B078,Posisi X,N0123,Pos. X,79.0,79.0,0.2,-0.2,0
+B078,Posisi Y,N0123,Pos. Y,95.0,95.0,0.2,-0.2,0
+B081,Posisi X From B080,N0372,Pos. X,81.2,81.2,0.1,-0.1,1
+B081,Posisi Y From B080,N0372,Pos. Y,3.8,3.8,0.1,-0.1,1
+A111,Angle,N0448,X-Angle,10.0,30.0,0.5,-0.5,0
+A111,Flatness,N0425,Flatness,0.0,0.0,0.05,-0.0,1
+A151,Posisi X Reamer 8H8,N0409,Pos. Y,19.0,19.0,0.05,-0.05,1
+A151,Posisi Y Reamer 8H8,N0409,Pos. Z,25.0,25.0,0.05,-0.05,1
+A151,Posisi X Drill 6.45,N0482,Pos. Y,19.0,19.0,0.2,-0.2,0
+A151,Posisi Y Drill 6.45,N0482,Pos. Z,25.0,25.0,0.2,-0.2,0
+A152,Posisi X Reamer 8H8,N0490,Distance,52.0,52.0,0.05,-0.05,1
+A152,Posisi Y Reamer 8H8,N0429,Pos. Z,25.0,25.0,0.05,-0.05,1
+A152,Posisi X Drill 6.45,N0485,Distance,52.0,52.0,0.2,-0.2,0
+A152,Posisi Y Drill 6.45,N0483,Pos. Z,25.0,25.0,0.2,-0.2,0
+A153,Posisi X,N0430,Pos. Y,8.4,8.4,0.2,-0.2,0
+A153,Posisi Y,N0430,Pos. Z,57.0,57.0,0.2,-0.2,0
+A154,Posisi X,N0446,Pos. Y,68.0,68.0,0.2,-0.2,0
+A154,Posisi Y,N0446,Pos. Z,109.0,109.0,0.2,-0.2,0
+A155,Posisi X,N0438,Pos. Y,31.0,31.0,0.2,-0.2,0
+A155,Posisi Y,N0438,Pos. Z,110.0,110.0,0.2,-0.2,0
+A156,Posisi X,N0442,Pos. Y,31.0,31.0,0.2,-0.2,0
+A156,Posisi Y,N0442,Pos. Z,110.0,110.0,0.2,-0.2,0
+A160,Posisi X,N0434,Pos. Y,45.0,45.0,0.2,-0.2,0
+A160,Posisi Y,N0434,Pos. Z,29.7,29.7,0.2,-0.2,0
