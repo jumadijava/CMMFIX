@@ -188,26 +188,42 @@ class DashboardPage:
     def svg_shield_ok(self):
         return '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>'
 
-    # ── Helper: hitung jumlah part fisik (sertakan SampleNo bila ada) ──
+    # ── Definisi "1 part" ──────────────────────────────────────────
+    # 1 part = 1 set titik ukur (sesuai Mapping) dari satu SampleNo yang
+    # diukur dalam satu kali pengukuran. Satu file pengukuran = satu
+    # timestamp (Date) → kunci unik part instance:
+    #   (Date, Shift, Cycle, SampleNo, PartName, ModelName)
+    # Kedua KPI (Total Part & Part NG) HARUS pakai kunci yang sama dan
+    # sama-sama KHUSUS Category=Produksi agar konsisten.
+    _PART_KEYS = ["Date", "Shift", "Cycle", "SampleNo", "PartName", "ModelName"]
+
+    def _produksi_only(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Filter khusus Produksi (kalau kolom Category ada)."""
+        if "Category" in df.columns:
+            return df[df["Category"] == "Produksi"]
+        return df
+
+    def _part_group_cols(self, df: pd.DataFrame) -> list:
+        return [c for c in self._PART_KEYS if c in df.columns]
+
+    # ── Helper: hitung jumlah part (khusus Category=Produksi) ──────
     def _count_parts(self, df: pd.DataFrame) -> int:
         if df.empty:
             return 0
-        group_cols = [df["Date"].dt.date, "Shift", "Cycle", "PartName", "ModelName"]
-        if "SampleNo" in df.columns:
-            group_cols.insert(3, "SampleNo")
-        return df.groupby(group_cols).ngroups
+        df_prod = self._produksi_only(df)
+        if df_prod.empty:
+            return 0
+        return df_prod.groupby(self._part_group_cols(df_prod)).ngroups
 
     # ── Helper: hitung jumlah part NG (khusus Category=Produksi) ────
     # Sebuah part dihitung NG jika ada minimal 1 titik NG pada instance tsb.
     def _count_ng_parts(self, df: pd.DataFrame) -> int:
         if df.empty:
             return 0
-        df_prod = df[df["Category"] == "Produksi"] if "Category" in df.columns else df
+        df_prod = self._produksi_only(df)
         if df_prod.empty:
             return 0
-        grp_cols = ["Date", "Shift", "Cycle", "PartName", "ModelName"]
-        if "SampleNo" in df_prod.columns:
-            grp_cols.insert(3, "SampleNo")
+        grp_cols = self._part_group_cols(df_prod)
         # Vektorisasi: flag NG per baris, lalu groupby any() — lebih cepat dari lambda apply
         has_ng_flag = (df_prod["Judgement"] == "NG")
         return int(has_ng_flag.groupby([df_prod[c] for c in grp_cols]).any().sum())
