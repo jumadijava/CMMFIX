@@ -1,0 +1,21 @@
+NO,POINT_PEMERIKSAAN,ID,NOMINAL,Newnom,Uppertol,Lowertol,KP
+S001,Posisi X,Z Value_NO.16,22.0,22.0,0.2,-0.2,0
+S001,Posisi Y,X Value_NO.16,42.0,42.0,0.2,-0.2,0
+S002,Distance X,Distance1_Z,1.5,1.5,0.1,-0.1,0
+S002,Distance Y,Distance1_X,86.0,86.0,0.2,-0.2,0
+S003,Posisi X,Z Value_NO.19,-7.7,7.7,0.2,-0.2,0
+S003,Posisi Y,X Value_NO.19,16.3,16.3,0.2,-0.2,0
+L100,Depth Boring Thd Spot Face L103,Dist P. L100 P. PLANE BOLT STOPPER_Z,9.0,9.0,0.2,0.0,0
+L100,Posisi X,X Value_DIAMETER 26,-2.4,2.4,0.05,-0.05,1
+L100,Posisi Z,Y Value_DIAMETER 26,60.5,60.5,0.05,-0.05,1
+L101,Posisi X Thd L100,X Value_SHAFT EX NO.24,-20.0,20.0,0.05,-0.05,1
+L101,Posisi Z Thd L100,Y Value_SHAFT EX NO.24,23.7,23.7,0.05,-0.05,1
+L102,Posisi X Thd L100,X Value_SHAFT IN NO.23,18.7,18.7,0.05,-0.05,1
+L102,Posisi Z Thd L100,Y Value_SHAFT IN NO.23,24.7,24.7,0.05,-0.05,1
+L103,Posisi X Thd L100,X Value_DIA STOPPER NO.22,-0.5,0.5,0.2,-0.2,0
+L103,Posisi Y Thd L100,Y Value_DIA STOPPER NO.22,25.2,25.2,0.2,-0.2,0
+N904,Posisi X,X Value NO. 25,-53.3,53.3,0.15,-0.15,0
+N904,Posisi Y,Y Value NO. 25,12.0,12.0,0.15,-0.15,0
+N905,Posisi X,X Value_NO.26,-59.3,59.3,0.2,-0.2,0
+N905,Posisi Y,Y Value_ULIR TEMP OIL,29.5,29.5,0.2,-0.2,0
+N905,Distance Thd N904,Dist NO.22_R,18.5,18.5,0.1,-0.1,0
