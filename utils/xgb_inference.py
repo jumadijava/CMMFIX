@@ -8,12 +8,35 @@ Cache key: "xgb_cls_{next_shift}_{next_date}" — identik di semua halaman.
 """
 
 import time
+import logging
 import pandas as pd
 import streamlit as st
 from pathlib import Path
 from utils.prediction_cache import save_xgb, load_xgb, save_rules, load_rules
 
 TTL_SECONDS = 1800  # 30 menit
+
+# ── Logger diagnostik ─────────────────────────────────────────────
+# Inference dijalankan di background thread dengan try/except lebar, jadi
+# kegagalan mudah "hilang" tanpa jejak. Tulis alasan skip/error ke
+# data/xgb_inference.log supaya bisa ditelusuri kalau prediksi tak muncul.
+_logger = logging.getLogger("xgb_inference")
+if not _logger.handlers:
+    try:
+        Path("data").mkdir(exist_ok=True)
+        _h = logging.FileHandler(Path("data") / "xgb_inference.log", encoding="utf-8")
+        _h.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+        _logger.addHandler(_h)
+        _logger.setLevel(logging.INFO)
+    except Exception:
+        pass
+
+
+def _log_skip(model_stem: str, reason: str) -> None:
+    try:
+        _logger.warning("skip %s: %s", model_stem, reason)
+    except Exception:
+        pass
 
 # ─────────────────────────────────────────────────────────────────
 CACHE_KEY_PREFIX = "xgb_cls_v2"  # v2: include Category filter fix
@@ -106,7 +129,8 @@ def run_xgb_inference(df_all: pd.DataFrame, allow_compute: bool = True) -> pd.Da
                 encoders  = joblib.load(ep)
                 with open(ip) as fi:
                     minfo = _json.load(fi)
-            except Exception:
+            except Exception as e:
+                _log_skip(stem, f"gagal load model/encoder/info: {e}")
                 continue
 
             threshold = minfo.get("optimal_threshold", 0.5)
@@ -142,8 +166,16 @@ def run_xgb_inference(df_all: pd.DataFrame, allow_compute: bool = True) -> pd.Da
                     df_ref[col+"_enc"] = 0
 
             try:
-                proba = xgb_model.predict_proba(df_ref[features].fillna(0))[:, 1]
-            except Exception:
+                # Pastikan SEMUA fitur bertipe numerik sebelum prediksi.
+                # KP (dan beberapa kolom lain) tersimpan sebagai TEXT di
+                # SQLite, sehingga df_ref["KP"] bertipe object/string.
+                # XGBoost 3.x menolak kolom object dan akan raise untuk
+                # SETIAP model — akibatnya prediksi tidak pernah muncul.
+                # Coerce ke numerik dulu (NaN → 0) agar aman.
+                X = df_ref[features].apply(pd.to_numeric, errors="coerce").fillna(0)
+                proba = xgb_model.predict_proba(X)[:, 1]
+            except Exception as e:
+                _log_skip(stem, f"predict_proba gagal: {e}")
                 continue
 
             df_ref["Prob_NG"]    = (proba * 100).round(1)
@@ -156,6 +188,11 @@ def run_xgb_inference(df_all: pd.DataFrame, allow_compute: bool = True) -> pd.Da
             all_results.append(df_ref)
 
         if not all_results:
+            _logger.warning(
+                "Tidak ada hasil XGB: %d model ditemukan tapi semua dilewati "
+                "(cek data matching part/model atau error di atas).",
+                len(model_files),
+            )
             return None
 
         result = pd.concat(all_results, ignore_index=True)
@@ -168,7 +205,8 @@ def run_xgb_inference(df_all: pd.DataFrame, allow_compute: bool = True) -> pd.Da
             pass
         return result
 
-    except Exception:
+    except Exception as e:
+        _logger.exception("run_xgb_inference gagal total: %s", e)
         return None
 
 
