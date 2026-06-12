@@ -1,0 +1,12 @@
+[theme]
+# Palet selaras dengan custom CSS aplikasi (mainloca.py / utils/theme.py)
+base = "light"
+primaryColor = "#DC2626"            # Merah brand AHM
+backgroundColor = "#FFFFFF"          # Latar konten utama (kartu/area putih)
+secondaryBackgroundColor = "#F1F4F9" # Latar app & widget sekunder
+textColor = "#0F172A"                # Teks utama (slate-900)
+font = "sans serif"
+
+[client]
+showErrorDetails = true
+toolbarMode = "minimal"
