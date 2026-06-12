@@ -1,0 +1,40 @@
+NO,POINT_PEMERIKSAAN,ID,PARAMETER,NOMINAL,Newnom,Uppertol,Lowertol,KP
+C222,Flatness,N0049,Flatness,0.0,0.0,0.05,-0.0,0
+C222,Flatness beetwen bosses area,N0166,Flatness,0.0,0.0,0.03,-0.0,0
+C003,Jarak sumbu X dari C004 Reamer,N0072,Distance,112.5,112.5,0.05,-0.05,1
+C003,Jarak sumbu Y dari C004 Reamer,N0072,Distance,112.0,112.0,0.05,-0.05,1
+C003,Jarak sumbu X dari C004 Tap,N0180,Distance,112.5,112.5,0.2,-0.2,0
+C003,Jarak sumbu Y dari C004 Tap,N0180,Distance,112.0,112.0,0.2,-0.2,0
+C004,Posisi X Reamer,N0067,Pos. Y,20.0,20.0,0.05,-0.05,1
+C004,Posisi Y Reamer,N0067,Pos. X,48.5,48.5,0.05,-0.05,1
+C004,Posisi X Tap,N0178,Pos. Y,20.0,20.0,0.2,-0.2,0
+C004,Posisi Y Tap,N0178,Pos. X,48.5,48.5,0.2,-0.2,0
+D031,Posisi Y,N0133,Pos. Y,50.22,50.22,0.07,-0.07,1
+D031,Posisi X,N0133,Pos. X,13.5,13.5,0.07,-0.07,1
+D031,Kesejajaran terhadap R,N0137,Parallel   2,0.0,0.0,0.05,-0.0,0
+D030,Posisi X,N0145,Pos. Y,50.22,50.22,0.07,-0.07,1
+D030,Posisi Y,N0145,Pos. X,13.5,13.5,0.07,-0.07,1
+D030,Kesejajaran terhadap R,N0149,Parallel   3,0.0,0.0,0.05,-0.0,0
+D030,Kesimetrisan terhadap R - S,N0077,Pos. Y,0.0,0.0,0.2,-0.0,0
+C006,Posisi X,N0077,Pos. X,0.0,0.0,0.05,-0.05,1
+C006,Posisi Y,N0077,Pos. Y,0.0,0.0,0.05,-0.05,1
+C007,Posisi X,N0089,Pos. X,0.0,0.0,0.05,-0.05,1
+C007,Posisi Y,N0089,Pos. Y,47.0,47.0,0.03,-0.03,1
+C008,Jarak dari C007,N0173,Distance,54.0,54.0,0.03,-0.03,1
+C008,Posisi Y,N0101,Pos. X,22.9,22.9,0.03,-0.03,1
+C032,Posisi X,N0124,Pos. Y,44.0,44.0,0.2,-0.2,0
+C032,Posisi Z,N0124,Pos. Z,20.0,20.0,0.2,-0.2,0
+C033,Posisi X,N0050,Pos. Y,14.5,14.5,0.2,-0.2,0
+C033,Posisi Y,N0050,Pos. X,51.0,51.0,0.2,-0.2,0
+C034,Posisi X,N0051,Pos. X,9.5,9.5,0.2,-0.2,0
+C034,Posisi Y,N0051,Pos. Y,151.0,151.0,0.2,-0.2,0
+C038,Posisi X,N0108,Pos. Y,62.0,62.0,0.2,-0.2,0
+C038,Posisi Y,N0108,Pos. X,88.5,88.5,0.2,-0.2,0
+C039,Posisi X,N0081,Pos. Y,8.0,8.0,0.2,-0.2,0
+C039,Posisi Y,N0081,Pos. X,67.5,67.5,0.2,-0.2,0
+C048,Posisi X,N0076,Pos. Y,37.0,37.0,0.2,-0.2,0
+C048,Posisi Y,N0076,Pos. X,0.0,0.0,0.2,-0.2,0
+C049,Posisi X,N0093,Pos. Y,93.0,93.0,0.2,-0.2,0
+C049,Posisi Y,N0093,Pos. X,48.5,48.5,0.2,-0.2,0
+C050,Posisi X,N0097,Pos. Y,142.0,142.0,0.2,-0.2,0
+C050,Posisi Y,N0097,Pos. X,7.0,7.0,0.2,-0.2,0
