@@ -1,0 +1,583 @@
+[
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "NT",
+            "K1AL",
+            "L2"
+        ],
+        "map": "Mapping/Mapping_NT_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD NT",
+        "model": "K1AL L2",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR"
+        },
+        "planid": "CYL HEAD K1AL NT FINISH QIS 2025"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "NT",
+            "K1AL",
+            "L3"
+        ],
+        "map": "Mapping/Mapping_NT_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD NT",
+        "model": "K1AL L3",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR"
+        },
+        "planid": "CYL HEAD K1AL NT FINISH QIS 2025"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "CAM",
+            "K1AL",
+            "L2"
+        ],
+        "map": "Mapping/Mapping_CAM_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD CAM",
+        "model": "K1AL L2",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR"
+        },
+        "planid": "CYL HEAD K1AL FINISH CAM QIS NEW"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "CAM",
+            "K1AL",
+            "L3"
+        ],
+        "map": "Mapping/Mapping_CAM_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD CAM",
+        "model": "K1AL L3",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR"
+        },
+        "planid": "CYL HEAD K1AL FINISH CAM QIS NEW"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "GV",
+            "K1AL"
+        ],
+        "map": "Mapping/Mapping_GV_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD GV",
+        "model": "K1AL",
+        "sample_map": {
+            "1": "F",
+            "2": "B",
+            "3": "L2"
+        },
+        "planid": "CYL HEAD KOJA CHAMPERING"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "ROUGH",
+            "K1AL"
+        ],
+        "map": "Mapping/Mapping_ROUGH_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD ROUGH",
+        "model": "K1AL",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR"
+        },
+        "planid": "CYL HEAD K1AL ROUGH 2024"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "NT",
+            "K2SA"
+        ],
+        "map": "Mapping/Mapping_NT_K2SA.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD NT",
+        "model": "K2SA",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR",
+            "5": "CL",
+            "6": "CR"
+        },
+        "planid": "03.CYL HEAD WSIRD K2SA NT 2023"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "CAM",
+            "K2SA"
+        ],
+        "map": "Mapping/Mapping_CAM_K2SA.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD CAM",
+        "model": "K2SA",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR",
+            "5": "CL",
+            "6": "CR"
+        },
+        "planid": "CYL HEAD K2SA CAM WSIRD 2021"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "GV",
+            "K2SA"
+        ],
+        "map": "Mapping/Mapping_GV_K2SA.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD GV",
+        "model": "K2SA",
+        "sample_map": {
+            "1": "L",
+            "2": "R"
+        },
+        "planid": "03.CYL HEAD K2SA CHAMPERING1 2021"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "ROUGH",
+            "K2SA"
+        ],
+        "map": "Mapping/Mapping_ROUGH_K2SA.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD ROUGH",
+        "model": "K2SA",
+        "sample_map": {
+            "1": "CL",
+            "2": "CR"
+        },
+        "planid": "CYL HEAD KOR ROUGH"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "NT",
+            "K60"
+        ],
+        "map": "Mapping/Mapping_NT_K60.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD NT",
+        "model": "K60",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR"
+        },
+        "planid": "CYL HEAD KZRA NT NEW 2023"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "CAM",
+            "K60"
+        ],
+        "map": "Mapping/Mapping_CAM_K60.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD CAM",
+        "model": "K60",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR"
+        },
+        "planid": "CYL HEAD KZRA CAM HOL WSIRD 01-2017"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "GV",
+            "K60"
+        ],
+        "map": "Mapping/Mapping_GV_K60.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD GV",
+        "model": "K60",
+        "sample_map": {
+            "1": "F",
+            "2": "B"
+        },
+        "planid": "CYL HEAD KZRA GV 2016"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "ROUGH",
+            "K60"
+        ],
+        "map": "Mapping/Mapping_ROUGH_K60.csv",
+        "out_base": "csv_processed",
+        "part": "CYL HEAD ROUGH",
+        "model": "K60",
+        "sample_map": {
+            "1": "CL",
+            "2": "CR"
+        }
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "HWP",
+            "K60"
+        ],
+        "map": "Mapping/Mapping_HWP_K60.csv",
+        "out_base": "csv_processed",
+        "part": "HOLDER WATER PUMP",
+        "model": "K60",
+        "sample_map": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4"
+        },
+        "planid": "HOLDER WATER PUMP NEW 2025 NEW1"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "COMP",
+            "K1AL"
+        ],
+        "map": "Mapping/Mapping_COMP_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CYL COMP",
+        "model": "K1AL",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR",
+            "5": "CL",
+            "6": "CR",
+            "7": "DL",
+            "8": "DR",
+            "9": "L2A",
+            "10": "L2B"
+        },
+        "planid": "CYL COMP K2F WSIRD ACT"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "COMP",
+            "K2V"
+        ],
+        "map": "Mapping/Mapping_COMP_K2V.csv",
+        "out_base": "csv_processed",
+        "part": "CYL COMP",
+        "model": "K60",
+        "sample_map": {
+            "1": "CR",
+            "2": "DR",
+            "3": "ER"
+        },
+        "planid": "CYL COMP K2VJ ACT 2024"
+    },
+    {
+        "type": "Zeiss",
+        "keywords": [
+            "COMP",
+            "K2SA"
+        ],
+        "map": "Mapping/Mapping_COMP_K2SA.csv",
+        "out_base": "csv_processed",
+        "part": "CYL COMP",
+        "model": "K2SA",
+        "sample_map": {
+            "1": "1 AL L",
+            "2": "2 AR L",
+            "3": "3 AL R",
+            "4": "4 AR R",
+            "5": "5 BL L",
+            "6": "6 BR L",
+            "7": "7 BL R",
+            "8": "8 BR R"
+        },
+        "planid": "CYL COMP K2SA WSIRD ACT"
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "L",
+            "K60"
+        ],
+        "map": "Mapping/Mapping_CRCSL_K60.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS L",
+        "model": "K60",
+        "sample_map": {
+            "1": "4L",
+            "2": "4R"
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "L",
+            "K2SA"
+        ],
+        "map": "Mapping/Mapping_CRCSL_K2SA.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS L",
+        "model": "K2SA",
+        "sample_map": {
+            "1": "5A",
+            "2": "5B",
+            "3": "6A",
+            "4": "6B"
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "L",
+            "K2SA",
+            "BD"
+        ],
+        "map": "Mapping/Mapping_CRCSL_K2SA_BD.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS L",
+        "model": "K2SA",
+        "sample_map": {
+            "1": "5A",
+            "2": "5B",
+            "3": "6A",
+            "4": "6B"
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "L",
+            "K1AL",
+            "L1"
+        ],
+        "map": "Mapping/Mapping_CRCSL_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS L",
+        "model": "K1AL L1",
+        "sample_map": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "11": "11",
+            "12": "12",
+            "13": "13",
+            "14": "14",
+            "15": "15",
+            "16": "16"
+        },
+        "shift_offset": {
+            "1": 0,
+            "2": 6,
+            "3": 11
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "L",
+            "K1AL",
+            "L2"
+        ],
+        "map": "Mapping/Mapping_CRCSL_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS L",
+        "model": "K1AL L2",
+        "sample_map": {
+            "1": "2A",
+            "2": "2B"
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "L",
+            "K1AL",
+            "L3"
+        ],
+        "map": "Mapping/Mapping_CRCSL_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS L",
+        "model": "K1AL L3",
+        "sample_map": {
+            "1": "3A",
+            "2": "3B"
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "MISSION",
+            "K60"
+        ],
+        "map": "Mapping/Mapping_MISSIONCASE_K60.csv",
+        "out_base": "csv_processed",
+        "part": "MISSION CASE",
+        "model": "K60",
+        "sample_map": {
+            "1": "4L",
+            "2": "4R"
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "R",
+            "K2SA"
+        ],
+        "map": "Mapping/Mapping_CRCSR_K2SA.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS R",
+        "model": "K2SA",
+        "sample_map": {
+            "1": "5AL",
+            "2": "5AR",
+            "3": "5BL",
+            "4": "5BR",
+            "5": "6AL",
+            "6": "6AR",
+            "7": "6BL",
+            "8": "6BR"
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "R",
+            "K60"
+        ],
+        "map": "Mapping/Mapping_CRCSR_K60.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS R",
+        "model": "K60",
+        "sample_map": {
+            "1": "4LR",
+            "2": "4RR"
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "R",
+            "K1AL",
+            "L1"
+        ],
+        "map": "Mapping/Mapping_CRCSR_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS R",
+        "model": "K1AL L1",
+        "sample_map": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "11": "11",
+            "12": "12",
+            "13": "13",
+            "14": "14",
+            "15": "15",
+            "16": "16"
+        },
+        "shift_offset": {
+            "1": 0,
+            "2": 6,
+            "3": 11
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "R",
+            "K1AL",
+            "L2"
+        ],
+        "map": "Mapping/Mapping_CRCSR_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS R",
+        "model": "K1AL L2",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR"
+        }
+    },
+    {
+        "type": "Mitutoyo",
+        "keywords": [
+            "CRCS",
+            "R",
+            "K1AL",
+            "L3"
+        ],
+        "map": "Mapping/Mapping_CRCSR_K1AL.csv",
+        "out_base": "csv_processed",
+        "part": "CRCS R",
+        "model": "K1AL L3",
+        "sample_map": {
+            "1": "AL",
+            "2": "AR",
+            "3": "BL",
+            "4": "BR"
+        }
+    }
+]
