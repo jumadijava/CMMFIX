@@ -1,0 +1,35 @@
+# ─────────────────────────────────────────────────────────────────
+#  CMM Quality Dashboard — Daftar Dependensi (Python 3.12)
+#  Pasang dengan:  pip install -r requirements.txt
+#  Versi di-pin sesuai environment .venv agar hasil konsisten.
+# ─────────────────────────────────────────────────────────────────
+
+# ── Framework UI ──────────────────────────────────────────────────
+streamlit==1.58.0                 # Kerangka utama aplikasi web
+streamlit-option-menu==0.4.0      # Menu navigasi sidebar
+streamlit-echarts==0.6.1          # Grafik/chart interaktif (ECharts)
+streamlit-antd-components==0.3.2  # Komponen UI tambahan (dipakai di Descriptive)
+streamlit-autorefresh==1.0.1      # Auto-refresh data real-time
+
+# ── Pengolahan data ───────────────────────────────────────────────
+pandas==3.0.3                     # Manipulasi tabel/DataFrame
+numpy==2.4.6                      # Komputasi numerik
+scipy==1.17.1                     # Fungsi statistik pendukung
+pytz==2026.2                      # Zona waktu (Asia/Jakarta)
+
+# ── Machine Learning / Prediksi ───────────────────────────────────
+xgboost==3.2.0                    # Model klasifikasi NG (AI Predictive)
+scikit-learn==1.9.0               # Encoder & utilitas ML (deserialisasi model)
+joblib==1.5.3                     # Load/simpan model .pkl
+pmdarima==2.1.1                   # Forecasting deret waktu (ARIMA)
+
+# ── Laporan / Export ──────────────────────────────────────────────
+openpyxl==3.1.5                   # Baca/tulis file Excel (template QCL)
+
+# ── Asisten AI (chatbot) ──────────────────────────────────────────
+google-genai==2.8.0               # Klien Google Gemini untuk floating chatbot
+
+# ── Opsional (Windows + Microsoft Excel) ──────────────────────────
+# Diperlukan HANYA untuk export PDF lewat Excel (report.py).
+# Aplikasi tetap jalan tanpa ini — fitur PDF dinonaktifkan otomatis.
+# pywin32==306
