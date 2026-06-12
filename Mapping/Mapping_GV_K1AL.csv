@@ -1,0 +1,7 @@
+NO,POINT_PEMERIKSAAN,ID,NOMINAL,Newnom,Uppertol,Lowertol,KP
+P201 Chamfering,Sudut,Projection Angle_GV EX,25,25,0.167,-0.167,
+P201 Chamfering,Posisi X,X Value_GV EX,0,0,0.1,-0.1,
+P201 Chamfering,Posisi Y,Z Value_GV EX,0,0,0.1,-0.1,
+P202 Chamfering,Sudut,Projection Angle_GV IN,-22,22,0.167,-0.167,
+P202 Chamfering,Posisi X,X Value_GV IN,0,0,0.1,-0.1,
+P202 Chamfering,Posisi Y,Z Value_GV IN,0,0,0.1,-0.1,
