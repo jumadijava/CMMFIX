@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: white; }
+</style>
+</head>
+<body>
+<div id="qcl-root"></div>
+<script>
+// ── Streamlit component protocol ──────────────────────────────────────────
+function _stSend(type, extra) {
+  window.parent.postMessage(Object.assign({ type: type }, extra), "*");
+}
+function setComponentValue(val) {
+  _stSend("streamlit:setComponentValue", {
+    apiVersion: 1, value: val, dataType: "json", isFromSetComponentValue: true
+  });
+}
+function setFrameHeight(h) {
+  _stSend("streamlit:setFrameHeight", { height: h });
+}
+
+// ── Inject HTML (including <script> tags) ─────────────────────────────────
+function injectHTML(container, html) {
+  container.innerHTML = html;
+  container.querySelectorAll("script").forEach(function(old) {
+    var s = document.createElement("script");
+    Array.from(old.attributes).forEach(function(a) { s.setAttribute(a.name, a.value); });
+    s.textContent = old.textContent;
+    old.parentNode.replaceChild(s, old);
+  });
+}
+
+// ── Collect all input values and send to Streamlit ────────────────────────
+function collectAndSend() {
+  var out = {};
+  document.querySelectorAll("input[name]").forEach(function(inp) {
+    var p = inp.name.split("__");
+    if (p.length === 2) {
+      if (!out[p[0]]) out[p[0]] = {};
+      out[p[0]][p[1]] = inp.value;
+    }
+  });
+  setComponentValue({ measurements: out });
+}
+
+// ── Listen for Streamlit render event ─────────────────────────────────────
+window.addEventListener("message", function(ev) {
+  if (!ev.data || ev.data.type !== "streamlit:render") return;
+  var args = ev.data.args || {};
+  if (args.form_html) {
+    var root = document.getElementById("qcl-root");
+    injectHTML(root, args.form_html);
+    // Attach listeners to all inputs
+    document.querySelectorAll("input[name]").forEach(function(inp) {
+      inp.addEventListener("input", collectAndSend);
+    });
+    // Send initial values immediately so Python has them before first "Simpan"
+    collectAndSend();
+    // Fit iframe height
+    setTimeout(function() {
+      setFrameHeight(document.body.scrollHeight + 20);
+    }, 100);
+  }
+});
+
+// ── Signal ready ──────────────────────────────────────────────────────────
+_stSend("streamlit:componentReady", { apiVersion: 1 });
+</script>
+</body>
+</html>
