@@ -3846,13 +3846,20 @@ class DescriptivePage:
 #      letakkan persis sebelum _render_deep_breadcrumb
 # ══════════════════════════════════════════════════════════════════════
 
-    # ── Helper: hitung Cpk ───────────────────────────────────────────
+    # ── Helper: hitung jumlah part (khusus Category=Produksi) ────────
+    # Definisi "1 part" identik dengan Dashboard: 1 set titik ukur (sesuai
+    # Mapping) dari satu SampleNo dalam satu kali pengukuran. Kunci unik:
+    #   (Date, Shift, Cycle, SampleNo, PartName, ModelName)
+    # KHUSUS Produksi agar konsisten dengan KPI part di Dashboard.
     def _count_parts(self, df: "pd.DataFrame") -> int:
         if df.empty:
             return 0
-        group_cols = [df["Date"].dt.date, "Shift", "Cycle", "PartName", "ModelName"]
-        if "SampleNo" in df.columns:
-            group_cols.insert(3, "SampleNo")
+        if "Category" in df.columns:
+            df = df[df["Category"] == "Produksi"]
+            if df.empty:
+                return 0
+        group_cols = [c for c in ["Date", "Shift", "Cycle", "SampleNo", "PartName", "ModelName"]
+                      if c in df.columns]
         return df.groupby(group_cols).ngroups
 
     def _calc_cpk(
