@@ -1,0 +1,39 @@
+{
+  "part": "CYL HEAD CAM",
+  "model_name": "K1AL L2",
+  "sample_nos": [
+    "AL",
+    "AR",
+    "BL",
+    "BR"
+  ],
+  "scenario": "A",
+  "features": [
+    "Shift",
+    "Cycle",
+    "KP",
+    "Nominal",
+    "Uppertol",
+    "Lowertol",
+    "TolRange",
+    "TolMidpoint",
+    "DayOfWeek",
+    "Hour",
+    "DayOfMonth",
+    "WeekOfYear",
+    "PartName_enc",
+    "ModelName_enc",
+    "SampleNo_enc",
+    "CMMName_enc",
+    "Parameter_enc",
+    "Category_enc",
+    "ref_enc",
+    "point_enc"
+  ],
+  "optimal_threshold": 0.3500000000000001,
+  "roc_auc": 0.876569858712716,
+  "f1_ng": 0.5314250155569384,
+  "n_train": 20521,
+  "n_test": 5131,
+  "scale_pos_weight": 8.611709601873537
+}
